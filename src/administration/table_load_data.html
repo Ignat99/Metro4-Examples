@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css" rel="stylesheet">
+
+    <title>Test Table load data - Metro 4 :: Popular HTML, CSS and JS library</title>
+
+</head>
+<body class="m4-cloak">
+<div class="container">
+    <h1>Table load test page</h1>
+
+    <table
+            id='table' class="table striped table-border mt-4"
+            data-role="table"
+            data-cls-table-top="row flex-nowrap"
+            data-cls-search="cell-md-8"
+            data-cls-rows-count="cell-md-4"
+            data-rows="5"
+            data-rows-steps="5, 10"
+            data-show-activity="false"
+            >
+        <thead>
+            <tr>
+                <th data-name="name">Name</th>
+                <th data-name="attributes">Attributes</th>
+                <th data-name="size">Size</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
+
+<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+<script>
+    $(function(){
+        let testObject = {
+          data:[
+            ['Name1', 'Attr1', 'Size1'],
+            ['Name2', 'Attr2', 'Size2'],
+          ]
+        };
+
+        localStorage.setItem('localData', JSON.stringify(testObject));
+
+        var table = Metro.getPlugin('#table', 'table');
+        table.setData(
+          JSON.parse(
+            localStorage.getItem('localData')
+          )
+        );
+    })
+</script>
+</body>
+</html>
