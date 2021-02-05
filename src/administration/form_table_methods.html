@@ -36,49 +36,50 @@
     </style>
 </head>
 <body>
-<div class="container">
-    <h1 class="text-center">Simple contact administration table</h1>
-    <h3 class="text-center">Methods</h3>
-    <form class="login-form bg-white p-6 mx-auto border bd-default win-shadow"
-          data-role="validator"
-          action="javascript:"
-          data-clear-invalid="2000"
-          data-on-error-form="invalidForm"
-          data-on-validate-form="validateForm">
-        <span class="mif-vpn-lock mif-4x place-right" style="margin-top: -10px;"></span>
-        <div data-role="tile" data-size="large" data-cover="https://metroui.org.ua/images/me.jpg">
-        <span class="branding-bar">Sergey Pimentov</span>
-        </div>
-        <hr class="thin mt-4 mb-4 bg-white">
-        <div class="form-group">
-            <input type="text" data-role="input" data-prepend="User name: ">
-        </div>
-        <div class="form-group">
-            <input type="text" data-role="input" data-prepend="<span class='mif-envelop'>" placeholder="Enter your email..." data-validate="required email">
-        </div>
-        <div class="form-group">
-            <input type="password" data-role="input" data-prepend="<span class='mif-key'>" placeholder="Enter your password..." data-validate="required minlength=6">
-        </div>
-        <div class="form-group mt-10">
-            <input type="checkbox" data-role="checkbox" data-caption="Remember me" class="place-right">
-            <button class="button">Submit form</button>
-        </div>
-            <label>Select date:</label>
-            <input type="text" data-role="datepicker" onchange="$('#inp2').val(this.value)">
-        <div class="cell-md-6">
-            <label>Data Birthday:</label>
-            <input type="text" id="inp2" readonly>
-        </div>
+    <div class="container">
+        <h1 class="text-center">Simple contact administration table</h1>
+        <h3 class="text-center">Methods</h3>
+        <form class="login-form bg-white p-6 mx-auto border bd-default win-shadow"
+              data-role="validator"
+              action="javascript:"
+              data-clear-invalid="2000"
+              data-on-error-form="invalidForm"
+              data-on-validate-form="validateForm">
+                <span class="mif-vpn-lock mif-4x place-right" style="margin-top: -10px;"></span>
+                <div data-role="tile" data-size="large" data-cover="https://metroui.org.ua/images/me.jpg">
+                    <span class="branding-bar">Sergey Pimentov</span>
+                </div>
+                <hr class="thin mt-4 mb-4 bg-white">
+                <div class="form-group">
+                    <input type="text" data-role="input" data-prepend="User name: ">
+                </div>
+                <div class="form-group">
+                    <input type="text" data-role="input" data-prepend="<span class='mif-envelop'>" placeholder="Enter your email..." data-validate="required email">
+                </div>
+                <div class="form-group">
+                    <input type="password" data-role="input" data-prepend="<span class='mif-key'>" placeholder="Enter your password..." data-validate="required minlength=6">
+                </div>
+
+                <div class="form-group">
+                    <label>Select date:</label>
+                    <input type="text" data-role="datepicker" onchange="$('#inp2').val(this.value)">
+                </div>
+                <div class="cell-md-6">
+                    <label>Data Birthday:</label>
+                    <input type="text" id="inp2" readonly>
+                </div>
+                <div class="row">
+                    <div class="cell-md-6">
+                        <input type="comment" data-role="input" data-prepend="Discription: ">
+                    </div>
+                </div>
+                <div class="form-group mt-10">
+                    <input type="checkbox" data-role="checkbox" data-caption="Remember me" class="place-right">
+                    <button class="button">Submit form</button>
+                </div>
         </form>
-        <div class="form-group">
-        <div class="row">
-        <div class="cell-md-6">
-        </div>
+        <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+        <!-- ads-script -->
     </div>
-</div>
-
-<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
-<!-- ads-script -->
-
 </body>
 </html>

@@ -10,6 +10,49 @@
 
 </head>
 <body class="m4-cloak">
+         <div class="container">
+                <h1>Dialog demos</h1>
+                <form class="login-form bg-white p-6 mx-auto border bd-default win-shadow"
+                    data-role="validator"
+                    action="javascript:"
+                    data-clear-invalid="2000"
+                    data-on-error-form="invalidForm"
+                    data-on-validate-form="validateForm">
+                    <span class="mif-vpn-lock mif-4x place-right" style="margin-top: -10px;"></span>
+                    <h2 class="text-light">Simple contact administration</h2>
+                    <div data-role="tile" data-size="large" data-cover="https://metroui.org.ua/images/me.jpg">
+                        <span class="branding-bar">Sergey Pimenov</span>
+                        </div>
+                    <hr class="thin mt-4 mb-4 bg-white">
+                    <div class="form-group">
+                        <input type="text" data-role="input" data-prepend="User name: ">
+                        <input type="text" data-role="input" data-prepend="<span class='mif-envelop'>" placeholder="Enter your email..." data-validate="required email">
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="cell-md-6">
+                                <label>Select date:</label>
+                                <input type="text" data-role="datepicker" onchange="$('#inp2').val(this.value)">
+                        </div>
+                        <div class="cell-md-6">
+                            <label>Data Birthday:</label>
+                            <input type="text" id="inp2" readonly>
+                            <script src="dialogs.js"></script>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mt-10">
+                    <input type="checkbox" data-role="checkbox" data-caption="Remember me" class="place-right">
+                    <button class="button">Submit form</button>
+                </div>
+                <div class="mt-4">
+                    <button class="button" onclick="timeoutDemo()">Timeout</button>
+                    <button class="button" onclick="animateDemo()">Animate</button>
+                    <button class="button" onclick="customsDemo()">Customs</button>
+                    <button class="button" onclick="actionsDemo()">Actions</button>
+                </div>
+            </form>
+        </div>
 <div class="container">
     <h1>Table load test page</h1>
 
@@ -43,6 +86,7 @@
           data:[
             ['Name1', 'Attr1', 'Size1'],
             ['Name2', 'Attr2', 'Size2'],
+            ['Anhelina Maikova', 'Junior-Middle', '1 m 75 cm'],
           ]
         };
 
