@@ -152,11 +152,13 @@ Tests:       1 passed, 1 total
 Snapshots:   0 total
 Time:        4.204s
 Ran all test suites.
+
  › Press o to only run tests related to changed files.
  › Press q to quit watch mode.
  › Press p to filter by a filename regex pattern.
  › Press t to filter by a test name regex pattern.
  › Press Enter to trigger a test run.
+ 
 Здесь нужно обратить внимание на несколько вещей. Во-первых, как говорилось выше, тест автоматически обнаруживает все файлы с тестовыми расширениями, включая .test.js и .spec.js. В нашем случае у нас имеется только один тестовый набор, то есть только один файл с расширением .test.js, и этот набор содержит только один тест. Jest может обнаруживать тесты в иерархии кода, то есть вы можете размещать тесты в директории, и Jest найдет их там.
 
 Во-вторых, Jest не просто запускает тест один раз и закрывается. Он продолжает работать в терминале. Если вы внесете изменения в исходный код, он проведет тесты снова.
@@ -267,6 +269,9 @@ serviceWorker.unregister();
 nano src/App.js
  
 Код в этом файле выглядит как набор стандартных элементов HTML. Вы увидите следующее:
+
+```node
+...
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -293,6 +298,8 @@ function App() {
 }
 
 export default App;
+...
+```
 
 Измените содержимое тега <p> с Edit <code>src/App.js</code> and save to reload. на Hello, world и сохраните изменения.
   Переключитесь в браузер, и вы увидите изменения:
