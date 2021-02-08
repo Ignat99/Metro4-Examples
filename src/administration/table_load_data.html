@@ -20,7 +20,9 @@
                     data-on-validate-form="validateForm">
                     <span class="mif-vpn-lock mif-4x place-right" style="margin-top: -10px;"></span>
                     <h2 class="text-light">Simple contact administration</h2>
-                    <div data-role="tile" data-size="large" data-cover="https://metroui.org.ua/images/me.jpg">
+                    <div class="tiles-grid">
+                    <div data-role="tile" data-size="small" data-cover="future-512.png" class="col-1 row-1"></div>
+                    <div data-role="tile" data-size="large" data-cover="https://metroui.org.ua/images/me.jpg" class="col-2 row-1"></div>
                         <span class="branding-bar">Sergey Pimenov</span>
                         </div>
                     <hr class="thin mt-4 mb-4 bg-white">
@@ -68,9 +70,11 @@
             >
         <thead>
             <tr>
-                <th data-name="name">Name</th>
-                <th data-name="attributes">Attributes</th>
-                <th data-name="size">Size</th>
+                <th data-name="User name: ">Name</th>
+                <th data-name="email">Email</th>
+                <th data-name="birthday">Data Birthday</th>
+                <th data-name="checkbox">Remember me</th>
+                <th data-name="picture">Picture</th>
             </tr>
         </thead>
         <tbody>
@@ -84,9 +88,9 @@
     $(function(){
         let testObject = {
           data:[
-            ['Name1', 'Attr1', 'Size1'],
-            ['Name2', 'Attr2', 'Size2'],
-            ['Anhelina Maikova', 'Junior-Middle', '1 m 75 cm'],
+            ['Petya Ivanovich', 'ivanovich@gmail.com', '2021-02-07', 'Yes', 'pictures1'],
+            ['Alina Stepanovna', 'stepanovna645@gmail.com', '2021-02-05', 'No', 'pictures2'],
+            ['Oleg Ulyanich', 'ulyanich55@gmail.com', '2021-02-01', 'Yes', 'pictures3'],
           ]
         };
 
